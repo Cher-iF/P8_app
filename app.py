@@ -47,7 +47,7 @@ with col1:
 
 
 with col2:
-    list_photos = os.listdir('input_images')
+    list_photos = os.listdir('images')
     st.header("Choose an image within selectbox")
     option = st.selectbox('Pick your cityscapes image :',list_photos)
     if option == '....png':
