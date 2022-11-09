@@ -21,9 +21,8 @@ st.set_page_config(
     page_title="P8-Image segmentation",
     page_icon="🧊",
     layout="wide",
-    initial_sidebar_state="expanded",
-    }
-)
+    initial_sidebar_state="expanded"
+    )
 
 st.title('WELCOME TO PROJECT 8 WEB PAGE ')
 
