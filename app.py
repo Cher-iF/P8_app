@@ -55,7 +55,7 @@ with col2:
 
     else :
          st.write('You selected:', option)
-         path=('./input_images/')
+         path=('./images/')
          #st.write(path)
          img = PIL.Image.open(path+option, mode='r')
          #st.write(img)
