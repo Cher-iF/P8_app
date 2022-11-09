@@ -9,7 +9,7 @@ import numpy as np
 from PIL import Image
 import PIL.Image as Image
 import io
-from StringIO import StringIO
+from io import StringIO
 
 
 # URL of the API
@@ -81,5 +81,5 @@ with col2:
          plt.imsave(s, img,cmap='viridis')
          st.image(img, caption ='Mask on colored aspect')
             
-          #plt.imsave('./images/test.png',img_array,cmap='viridis')
+         #plt.imsave('./images/test.png',img_array,cmap='viridis')
          #st.image('./images/test.png', caption ='Mask on colored aspect')
