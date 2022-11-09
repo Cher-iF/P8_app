@@ -3,7 +3,7 @@ import os
 import PIL.Image
 import streamlit as st
 import requests
-import matplotlib.pyplot as plt
+import matplotlib as plt
 import cv2
 import numpy as np
 from PIL import Image
@@ -20,9 +20,7 @@ url = 'https://p8-app-deploy.azurewebsites.net/segment'
 st.set_page_config(
     page_title="P8-Image segmentation",
     page_icon="🧊",
-    layout="wide",
-    initial_sidebar_state="expanded"
-    )
+    layout="wide")
 
 st.title('WELCOME TO PROJECT 8 WEB PAGE ')
 
