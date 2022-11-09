@@ -50,7 +50,7 @@ with col2:
     list_photos = os.listdir('images')
     st.header("Choose an image within selectbox")
     option = st.selectbox('Pick your cityscapes image :',list_photos)
-    if option == '....png':
+    if option == '00000.png':
         st.write("Didn't pick your image yet....." )
 
     else :
