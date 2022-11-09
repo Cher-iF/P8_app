@@ -16,12 +16,6 @@ import io
 #url = 'http://localhost:5000/segment'
 url = 'https://p8-app-deploy.azurewebsites.net/segment'
 
-
-st.set_page_config(
-    page_title="P8-Image segmentation",
-    page_icon="🧊",
-    layout="wide")
-
 st.title('WELCOME TO PROJECT 8 WEB PAGE ')
 
 col1, col2 = st.columns(2)
@@ -59,20 +53,19 @@ with col2:
          path=('./images/')
          #st.write(path)
          img = PIL.Image.open(path+option, mode='r')
-         #st.write(img)
-         #st.image(img)
          b = io.BytesIO()
          img.save(b, 'png')
          im_bytes = b.getvalue()
          #st.write(type(im_bytes))
          image_data = {'image': im_bytes}
-         #st.write(image_data)
          r = requests.post(url, files=image_data)
          st.write('URL response state  :', r)
          img_array = cv2.imdecode(np.frombuffer(r.content, np.uint8), -1)
          st.image(img, width=256,caption='Original image')
          #st.write(img_array)
          st.image(img_array,caption='Mask on Grayscale')
-                     
-         #plt.imsave('./images/test.png',img_array,cmap='viridis')
-         #st.image('./images/test.png', caption ='Mask on colored aspect')
+         b1= io.BytesIO()            
+         im = plt.imsave('test.png',img_array,cmap='viridis')
+         im.save(b1,'png')
+         imm_bytes = im.getvalue()
+         st.image(imm_bytes, caption ='Mask on colored aspect')
