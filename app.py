@@ -37,8 +37,8 @@ with col1:
         #st.write(img_array)
         st.image(img_array,caption='Mask on Grayscale')
              
-        #plt.imsave('./images/test.png',img_array,cmap='viridis')
-        #st.image('./images/test.png', caption ='Mask on colored aspect')
+        plt.imsave('./images/test.png',img_array,cmap='viridis')
+        st.image('./images/test.png', caption ='Mask on colored aspect')
 
 
 with col2:
@@ -64,8 +64,6 @@ with col2:
          st.image(img, width=256,caption='Original image')
          #st.write(img_array)
          st.image(img_array,caption='Mask on Grayscale')
-         #b1= io.BytesIO()            
-         #im = plt.imsave('test.png',img_array,cmap='viridis')
-         #im.save(b1,'png')
-         #imm_bytes = im.getvalue()
-         #st.image(imm_bytes, caption ='Mask on colored aspect')
+         plt.imsave('./images/test.png',img_array,cmap='viridis')
+         st.image('./images/test.png', caption ='Mask on colored aspect')
+         
